@@ -52,7 +52,7 @@ public class TabBar extends TabActivity implements OnTabChangeListener{
 
         // Set com.example.tz.touchscreenimplementation.Tab1 as Default tab and change image
         tabHost.getTabWidget().setCurrentTab(0);
-        tabHost.getTabWidget().getChildAt(0).setBackgroundResource(R.drawable.tab1_over);
+        tabHost.getTabWidget().getChildAt(0).setBackgroundResource(R.drawable.charger_select);
 
 
     }
@@ -67,22 +67,22 @@ public class TabBar extends TabActivity implements OnTabChangeListener{
         for(int i=0;i<tabHost.getTabWidget().getChildCount();i++)
         {
             if(i==0)
-                tabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.tab1);
+                tabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.charger);
             else if(i==1)
-                tabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.tab2);
+                tabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.home);
             else if(i==2)
-                tabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.tab3);
+                tabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.implant);
         }
 
 
         Log.i("tabs", "CurrentTab: "+tabHost.getCurrentTab());
 
         if(tabHost.getCurrentTab()==0)
-            tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundResource(R.drawable.tab1_over);
+            tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundResource(R.drawable.charger_select);
         else if(tabHost.getCurrentTab()==1)
-            tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundResource(R.drawable.tab2_over);
+            tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundResource(R.drawable.home_select); // HOME_SELECT
         else if(tabHost.getCurrentTab()==2)
-            tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundResource(R.drawable.tab3_over);
+            tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundResource(R.drawable.implant_select);
 
     }
 
